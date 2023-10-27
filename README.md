@@ -2,6 +2,12 @@
 <div align="center" >
 <img src="https://downloads-report-flask-parthdasawant.vercel.app/" />
 </div>
+
+Check out the article for step-by-step guide
+<div align="center" >
+<a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@parthdasawant/0"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@parthdasawant/0" alt="Recent Article 0"> 
+</div>
+
 ## A) Cloning & Getting Started with the Project
 
 1. **Clone the Git Repository**: Open your terminal or command prompt and navigate to the directory where you want to clone the Git repository. Use the `git clone` command to clone the repository:
@@ -62,3 +68,15 @@
 ### For deployment
 **Make sure to use the proper JSON key file path with `api/` in starting of the path(or relative path)** 
 Since Vercel root directory will be ```./```.
+
+## How to use After deployment
+### GitHub Readme badge
+Add following code to your readme file by replacing `<Vercel_Deployed_URL>` with your URL.
+```bash
+    <img src="<Vercel_Deployed_URL>" />
+```
+### API
+You can access the API by replacing `<Vercel_Deployed_URL>` with your URL in following link. 
+```bash
+    <Vercel_Deployed_URL>/json
+```
