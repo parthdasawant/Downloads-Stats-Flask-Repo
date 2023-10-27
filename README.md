@@ -19,7 +19,7 @@ Check out the article for step-by-step guide
 2. **Change Directory**: Navigate into the cloned repository's directory:
 
     ```bash
-    cd Downloads-Stats-Flask-Repo
+    cd Downloads-Stats-Flask-Repo/api
     ```
 
 3. **Create a Virtual Environment**: To create a Python virtual environment for this project, use `venv`. You can specify the environment's name (replace `myenv` with your preferred name):
@@ -60,15 +60,24 @@ Check out the article for step-by-step guide
 
 ### For testing locally,
 ```bash
-    cd api
-```
-```bash
     flask run
 ```
 ### For deployment
 **Make sure to use the proper JSON key file path with `api/` in starting of the path(or relative path)** 
 Since Vercel root directory will be ```./```.
 
+#### The file structure tree should be as follows
+```bash
+.
+├── api/
+│   ├── env/
+│   ├── app.py
+│   └── keyFile.json
+├── .gitignore
+├── README.md
+├── requirements.txt
+└── vercel.json
+```
 ## How to use After deployment
 ### GitHub Readme badge
 Add following code to your readme file by replacing `<Vercel_Deployed_URL>` with your URL.
