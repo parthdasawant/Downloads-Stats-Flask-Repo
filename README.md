@@ -80,3 +80,5 @@ You can access the API by replacing `<Vercel_Deployed_URL>` with your URL in fol
 ```bash
     <Vercel_Deployed_URL>/json
 ```
+### Conclusion
+Well, I think that’s all for now. If you find any issues, you can directly open an issue on GitHub. I’ll try to help as much as I can.
