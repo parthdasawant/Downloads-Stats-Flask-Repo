@@ -59,16 +59,19 @@ def helper():
             file_name = f'installs_{app_name}_{year}{month:02}_overview.csv'
             file_path = f'stats/installs/{file_name}'
             bucket = client.get_bucket(bucket_name)
-            blob =  bucket.blob(file_path)
-            with blob.open("r", encoding='utf-16le') as f:
-                passFirstLine = True
-                for line in f:
-                    if passFirstLine:
-                        passFirstLine = False
-                        continue
-                    lineList = line.split(',')
-                    totalDownload += int(lineList[-3])
-                    lastDate = lineList[0]
+            try:
+                blob =  bucket.blob(file_path)
+                with blob.open("r", encoding='utf-16le') as f:
+                    passFirstLine = True
+                    for line in f:
+                        if passFirstLine:
+                            passFirstLine = False
+                            continue
+                        lineList = line.split(',')
+                        totalDownload += int(lineList[-3])
+                        lastDate = lineList[0]
+            except:
+                continue
         return totalDownload, lastDate
     
     except Exception as e:
